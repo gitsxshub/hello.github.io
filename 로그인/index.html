@@ -16,38 +16,27 @@
             color: white;
             font-family: Arial, sans-serif;
         }
-
         @keyframes aurora {
             0% { background-color: rgba(0, 128, 128, 0.5); }
             50% { background-color: rgba(128, 0, 128, 0.5); }
             100% { background-color: rgba(0, 0, 128, 0.5); }
         }
-
         .container {
             text-align: center;
         }
-
         h1 {
             font-size: 2rem;
         }
-
-        input {
+        input, button {
             padding: 10px;
             margin: 10px 0;
             border-radius: 5px;
             border: none;
             width: 200px;
         }
-
         button {
-            padding: 10px 20px;
-            font-size: 1rem;
             background-color: rgba(255, 255, 255, 0.8);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
         }
-
         button:hover {
             background-color: rgba(255, 255, 255, 1);
         }
@@ -60,18 +49,6 @@
         <input type="password" id="password" placeholder="비밀번호" />
         <button id="loginButton">로그인</button>
     </div>
-    <script>
-        (function() {
-            document.getElementById("loginButton").onclick = function() {
-                var u = document.getElementById("username").value;
-                var p = document.getElementById("password").value;
-                if (u === "test" && p === "test") {
-                    window.location.href = "../sxs.html"; // 상위 디렉토리로 이동
-                } else {
-                    alert("아이디 또는 비밀번호가 틀렸습니다.");
-                }
-            };
-        })();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
