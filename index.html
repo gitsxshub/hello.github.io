@@ -55,11 +55,16 @@
     <div class="container">
         <h1>환영합니다!</h1>
         <p>파일 목록으로 이동하려면 버튼을 클릭하세요.</p>
-        <button id="fileListButton">파일 목록 보기</button>
+        <button id="fileListButton">암구호 파일 목록 보기</button>
+        <button id="textFileButton">텍변 파일 목록 보기</button>
     </div>
     <script>
         document.getElementById("fileListButton").addEventListener("click", function() {
-            window.location.href = "file-list.html";
+            window.location.href = "암구호/index.html"; // 암구호 폴더의 index.html
+        });
+
+        document.getElementById("textFileButton").addEventListener("click", function() {
+            window.location.href = "텍변/index.html"; // 텍변 폴더의 index.html
         });
     </script>
 </body>
