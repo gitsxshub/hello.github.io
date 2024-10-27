@@ -1,1 +1,55 @@
-<h1><strong>암구호 : U2FsdGVkX19pbVhROAhKU/+XiYs3EKrP38zrmJxtVfjiltJ0fgPpU9MTIpr8lsPB</strong></h1>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>암구호 페이지</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(180deg, rgba(0, 255, 255, 0.7), rgba(255, 0, 255, 0.7));
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>암구호 : <strong id="password">U2FsdGVkX19pbVhROAhKU/+XiYs3EKrP38zrmJxtVfjiltJ0fgPpU9MTIpr8lsPB</strong></h1>
+        <button id="copyButton">복사하기</button>
+    </div>
+    <script>
+        document.getElementById("copyButton").addEventListener("click", function() {
+            const passwordText = document.getElementById("password").innerText;
+            navigator.clipboard.writeText(passwordText).then(function() {
+                alert("암구호가 복사되었습니다!");
+            }, function() {
+                alert("복사에 실패했습니다.");
+            });
+        });
+    </script>
+</body>
+</html>
